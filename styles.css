@@ -1,0 +1,133 @@
+body {
+  font-family: 'MS Sans Serif', Tahoma, Verdana, sans-serif; 
+  background-color: #008080; 
+  margin: 0;
+  padding: 20px; 
+}
+
+.navbar, .sidebar, .card {
+  background-color: #c0c0c0; 
+  color: black;
+  border: 3px solid;
+  border-color: #ffffff #808080 #808080 #ffffff; 
+  padding: 15px;
+  border-radius: 8px; 
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4); 
+  transition: all 0.3s ease; 
+}
+
+header, footer {
+  background-color: #000080; 
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 40px; 
+}
+
+.navbar {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px dotted transparent;
+}
+
+.navbar a:hover {
+  border: 1px dotted black; 
+}
+
+.layout-container {
+  display: grid; 
+  grid-template-columns: 1fr 2fr; 
+  gap: 20px;
+}
+
+.sidebar img {
+  width: 80%;
+  border-radius: 4px;
+  border: 2px solid #808080;
+  margin-bottom: 15px;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.section-title {
+  font-size: 24px;
+}
+
+.cards-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column; 
+  height: 100%; 
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.6);
+}
+
+.card-title {
+  background-color: #000080; 
+  color: white;
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  margin: -15px -15px 15px -15px; 
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.btn {
+  margin-top: auto; 
+  background-color: #c0c0c0;
+  font-family: inherit;
+  font-weight: bold;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff; 
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #dfdfdf;
+}
+
+.btn:active {
+  border-color: #808080 #ffffff #ffffff #808080; 
+}
+
+@media (max-width: 850px) {
+  .layout-container, .cards-container {
+    grid-template-columns: 1fr; 
+  }
+  
+  .navbar {
+    flex-direction: column; 
+    gap: 10px;
+  }
+}
